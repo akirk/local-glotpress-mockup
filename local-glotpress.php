@@ -12,9 +12,10 @@ add_action( 'admin_menu', function() {
 		$themes = apply_filters( 'local_glotpress_local_themes', get_themes() );
 		require_once ABSPATH . 'wp-admin/includes/translation-install.php';
 		$languages = wp_get_available_translations();
+		$language = 'Unknown';
 		if ( 'en_US' === get_user_locale() ) {
-			$langauge = 'English (US)';
-		} else {
+			$language = 'English (US)';
+		} elseif ( isset( $languages[ get_user_locale() ] ) ) {
 			$language = $languages[ get_user_locale() ]['english_name'];
 		}
 		?>
