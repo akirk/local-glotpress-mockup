@@ -24,7 +24,7 @@ add_action( 'admin_menu', function() {
 			<p>These are the plugins and themes that you have installed locally. With GlotPress you can change the translations of these.</p>
 			<table class="form-table">
 				<tr>
-					<th>WordPress</th>
+					<th>Core</th>
 					<td>WordPress <?php echo esc_html( $wp_version ); ?>
 					<a href=""><?php echo esc_html( sprintf( 'Translate to %s', $language ) ); ?></a>
 				</td>
