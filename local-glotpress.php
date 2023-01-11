@@ -5,8 +5,8 @@
  */
 
 add_action( 'admin_menu', function() {
-	add_menu_page( 'glotpress', 'GlotPress', 'read', 'glotpress', null, 'dashicons-translation' );
-	add_submenu_page( 'glotpress', __( 'Home' ), __( 'Home' ), 'read', 'glotpress', function() {
+	add_menu_page( 'Local GlotPress', 'GlotPress', 'read', 'glotpress', null, 'dashicons-translation' );
+	add_submenu_page( 'Local GlotPress', 'Project List', 'Project List', 'read', 'glotpress', function() {
 		global $wp_version;
 		$plugins = apply_filters( 'local_glotpress_local_plugins', get_plugins() );
 		$themes = apply_filters( 'local_glotpress_local_themes', get_themes() );
